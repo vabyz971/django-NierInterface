@@ -1,0 +1,32 @@
+{% if display_search %}<form class="list-form-search" method="GET" action=".">{% endif %}
+
+  <div class="">
+    <table>
+      {% if list_title %}<caption{% if hide_list_title %} class="sr-only" {% endif %}>
+        {% if list_title_icon %}<span class="{{ list_title_icon }}"></span>{% endif %}
+        {{ list_title }}</caption>{% endif %}
+    </table>
+    <thead>
+      <tr class="list-filter-labels">
+        {% for field in fields %}
+        {% label_field model field html_tag='th' %}
+        {% endfor %}
+        <th><span class="sr-only">{% trans "Action" %}</span></th>
+      </tr>
+      {% if display_search %}
+      <tr class="bg-secondary list-filter-fields">
+        {% for field in fields %}
+        {% search_field model field html_tag='td' %}
+        {% endfor %}
+        <td>
+          <div class="btn-group">
+            <button type="submit" name="search" class="btn btn-primary" value="on"><i class="fas fa-search"></i><span class="sr-only">{% trans "search" %}</span></button>
+            {% if request.GET.search == 'on' %}<a href="{{ request.path }}" class="btn btn-dark"><i class="fas fa-times"></i><span class="sr-only">{% trans "clear search" %}</span></a>{% endif %}
+          </div>
+        </td>
+      </tr>
+      {% endif %}
+    </thead>
+  </div>
+
+  {% if display_search %}</form>{% endif %}

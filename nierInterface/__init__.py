@@ -2,10 +2,10 @@
 # @Date:   2020-09-03T10:18:13-04:00
 # @Email:  vabyz971@gmail.com
 # @Last modified by:   jahleel
-# @Last modified time: 2020-09-03T11:43:51-04:00
+# @Last modified time: 2020-09-03T16:41:40-04:00
 # @License: GPLv3
 
-VERSION = (0, 1, 0, "f")  # following PEP 386
+VERSION = (0, 1, 2, "f")  # following PEP 386
 DEV_N = None
 
 

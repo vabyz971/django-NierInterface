@@ -2,11 +2,12 @@
 # @Date:   2020-09-03T11:36:27-04:00
 # @Email:  vabyz971@gmail.com
 # @Last modified by:   jahleel
-# @Last modified time: 2020-09-03T11:43:48-04:00
+# @Last modified time: 2020-09-03T11:46:46-04:00
 # @License: GPLv3
 
 from __future__ import unicode_literals
 from django.apps import AppConfig as DefaultAppConfig
+from django.conf import settings
 
 
 class AppConfig(DefaultAppConfig):

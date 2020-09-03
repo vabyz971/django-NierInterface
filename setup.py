@@ -2,7 +2,7 @@
 # @Date:   2020-09-03T10:00:44-04:00
 # @Email:  vabyz971@gmail.com
 # @Last modified by:   jahleel
-# @Last modified time: 2020-09-03T11:38:09-04:00
+# @Last modified time: 2020-09-03T14:21:05-04:00
 # @License: GPLv3
 
 from setuptools import setup, find_packages
@@ -22,7 +22,12 @@ setup(
         "Programming Language :: Python",
         "Framework :: Django",
     ],
-    install_requires=['django>3', 'Pillow', 'easy-thumbnails'],
+    install_requires=[
+        'django>3',
+        'Pillow',
+        'easy-thumbnails',
+        'django-crispy-forms',
+    ],
     include_package_data=True,
     zip_safe=False,
 )

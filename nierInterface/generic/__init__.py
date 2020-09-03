@@ -2,7 +2,7 @@
 # @Date:   2020-09-03T10:25:28-04:00
 # @Email:  vabyz971@gmail.com
 # @Last modified by:   jahleel
-# @Last modified time: 2020-09-03T11:17:03-04:00
+# @Last modified time: 2020-09-03T16:06:41-04:00
 # @License: GPLv3
 #
 # Surcharge des classes based views
@@ -240,17 +240,22 @@ class ListView(ContextMixin, DefaultListView):
     detail_url_name = None
     btn_add_title = _('Add')
 
-    def get_queryset(self):
-        """Inclus le tri pour les listes de données.
+    def get_fields(self):
+        if self.fields is None:
+            return ()
+        return self.fields
 
-        Il suffit d'ajouter un lien ?order_by=parametre pour trier
-        en fonction de ce paramètre.
-        """
-        queryset = super(ListView, self).get_queryset()
-
-        if self.get_display_search():
-            return self.search_queryset(queryset)
-        return queryset
+    # def get_queryset(self):
+    #     """Inclus le tri pour les listes de données.
+    #
+    #     Il suffit d'ajouter un lien ?order_by=parametre pour trier
+    #     en fonction de ce paramètre.
+    #     """
+    #     queryset = super(ListView, self).get_queryset()
+    #
+    #     if self.get_display_search():
+    #         return self.search_queryset(queryset)
+    #     return queryset
 
     def get_template_names(self):
         names = super(ListView, self).get_template_names()

@@ -1,0 +1,3 @@
+Pillow
+django>3
+easy-thumbnails

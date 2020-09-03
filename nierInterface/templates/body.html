@@ -1,49 +1,43 @@
-{% load static static sass_tags %}
-<!DOCTYPE html>
-<html lang="fr">
+{% extends "base.html" %}
 
-<head>
-  <meta charset="utf-8">
-  <title>{% block head_title %} MGC {% endblock %}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+{% block head-body %}{% endblock %}
 
-  {% block head %}{% endblock %}
-  <link rel="stylesheet" href='{% sass_src "scss/main.scss" %}'>
+{% block body %}
 
-</head>
+{# Sidebar #}
+{% block navbar %}
+<div class="container">
+  <nav class="content mb-5">
+    {% block nav %}
+    {% include "include/navbar_menu.html" %}
+    {% endblock nav %}
+  </nav>
+</div>
+{% endblock navbar %}
 
-<body>
-  {# Sidebar #}
-  {% block navbar %}
+<div class="pattern">
   <div class="container">
-    <nav class="content mb-0">
-      {% block navbar-nav %}
-      {% include "include/navbar_menu.html" %}
-      {% endblock navbar-nav %}
-    </nav>
+    <div class="pattern-inner"></div>
   </div>
-  {% endblock navbar %}
-  <header>
-    <div class="pattern">
-      <div class="container">
-        <div class="pattern-inner"></div>
-      </div>
-    </div>
-    <div class="container">
-      <h1>
-        <span>{{title}}</span>
-      </h1>
-    </div>
-  </header>
-  <main>
-    {% block body %}{% endblock %}
-  </main>
-  <div class="pattern">
-    <div class="container">
-      <div class="pattern-inner"></div>
-    </div>
+</div>
+
+{% block content-title %}
+<header>
+  <div class="container">
+    <h1>
+      <span>{% block title %}{{ title }}{% endblock title %}</span>
+    </h1>
   </div>
+</header>
+{% endblock content-title %}
 
-</body>
+{% block content-inner %}
+{% endblock content-inner %}
 
-</html>
+<div class="pattern pos-fix-bottom">
+  <div class="container">
+    <div class="pattern-inner"></div>
+  </div>
+</div>
+
+{% endblock %}
