@@ -1,0 +1,143 @@
+$bgColor: #C8C2AA;
+$seconde: #4D493E;
+$shadowtext: #4d493e3d;
+$letterSpacing: 0.1rem;
+$boxShadow: 3px 3px 0 rgba($seconde, .6);
+
+*:focus {
+  outline: none !important;
+}
+
+body {
+  background-color: $bgColor;
+  background-size: 4px 4px;
+  background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,.07) 4px), linear-gradient(transparent, transparent 3px, rgba(0,0,0,.07) 4px);
+  color: $seconde;
+  font-family: "helvetica", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.03rem;
+  margin: 0;
+  min-height: 100vh;
+  box-shadow: inset 0 0 150px rgba($seconde, .4), inset 0 0 150px rgba($seconde, .3);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  letter-spacing: $letterSpacing;
+}
+
+::selection {
+  background-color: $bgColor;
+}
+
+header {
+  padding: 1rem 0;
+}
+
+.navbar-nav {
+  display: flex;
+  padding: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  list-style-type: none;
+  justify-content: flex-start;
+
+  .nav-item {
+    margin-right: 15px;
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .nav-active {
+      color: #dcd8c0;
+      background-color: #454138;
+      box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1;
+      border-bottom: solid #454138 10px;
+    }
+  }
+}
+
+.container {
+  padding: 0 4rem;
+}
+
+h1 {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0 $shadowtext;
+
+  span {
+    margin-right: -.7rem;
+  }
+}
+
+h2 {
+  font-weight: lighter;
+  border: solid $shadowtext;
+  border-width: 0.1rem 0;
+  padding: 0.1rem 1rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  box-shadow: $boxShadow;
+}
+
+.content {
+  padding-left: 4rem;
+  background-image: linear-gradient(90deg, rgba($seconde, .2), rgba($seconde, .2) 14px, transparent 14px, transparent 20px, rgba($seconde, .2) 20px, rgba($seconde, .2) 23px, transparent 23px);
+  margin-bottom: 2rem;
+}
+
+.pattern {
+  border-top: 2px solid $seconde;
+}
+
+.pattern-inner {
+  height: 40px;
+  background-size: 50px 3px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px, 50px 1px;
+  background-position: 0 0, 22px 4px, 22px 5px, 22px 6px, 22px 7px, 28px 12px, 28px 13px, 28px 14px, 28px 15px;
+  background-image: linear-gradient(90deg, $seconde, $seconde 10px, transparent 10px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px, transparent 12px, rgba($seconde, .4) 12px, rgba($seconde, .4) 13px, rgba($seconde, .8) 13px, rgba($seconde, .8) 14px, rgba($seconde, .9) 14px, rgba($seconde, .9) 15px, rgba($seconde, .4) 15px, rgba($seconde, .4) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px, transparent 12px, rgba($seconde, .9) 12px, rgba($seconde, .9) 13px, rgba($seconde, 1) 13px, rgba($seconde, 1) 14px, rgba($seconde, 1) 14px, rgba($seconde, 1) 15px, rgba($seconde, .9) 15px, rgba($seconde, .9) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px, transparent 12px, rgba($seconde, .9) 12px, rgba($seconde, .9) 13px, rgba($seconde, 1) 13px, rgba($seconde, 1) 14px, rgba($seconde, 1) 14px, rgba($seconde, 1) 15px, rgba($seconde, .9) 15px, rgba($seconde, .9) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px, transparent 12px, rgba($seconde, .4) 12px, rgba($seconde, .4) 13px, rgba($seconde, .8) 13px, rgba($seconde, .8) 14px, rgba($seconde, .9) 14px, rgba($seconde, .9) 15px, rgba($seconde, .4) 15px, rgba($seconde, .4) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px);
+  background-repeat: repeat-x;
+}
+/* CARD NIER */
+$bgcard: #dcd8c0;
+$bgcard-title: #bab5a1;
+
+.card {
+  height: 320px;
+  width: 500px;
+  background-color: $bgcard;
+
+  .title {
+    order: -1;
+    margin: 0 0 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: $bgcard-title;
+    background-color: $seconde;
+  }
+
+  .body-card {}
+}

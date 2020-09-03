@@ -1,0 +1,49 @@
+{% load static static sass_tags %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block head_title %} MGC {% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  {% block head %}{% endblock %}
+  <link rel="stylesheet" href='{% sass_src "scss/main.scss" %}'>
+
+</head>
+
+<body>
+  {# Sidebar #}
+  {% block navbar %}
+  <div class="container">
+    <nav class="content mb-0">
+      {% block navbar-nav %}
+      {% include "include/navbar_menu.html" %}
+      {% endblock navbar-nav %}
+    </nav>
+  </div>
+  {% endblock navbar %}
+  <header>
+    <div class="pattern">
+      <div class="container">
+        <div class="pattern-inner"></div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>
+        <span>{{title}}</span>
+      </h1>
+    </div>
+  </header>
+  <main>
+    {% block body %}{% endblock %}
+  </main>
+  <div class="pattern">
+    <div class="container">
+      <div class="pattern-inner"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

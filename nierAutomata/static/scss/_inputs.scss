@@ -1,0 +1,40 @@
+// @Author: Jahleel Lacascade <vabyz971>
+// @Date:   2020-09-02T21:16:57-04:00
+// @Email:  vabyz971@gmail.com
+// @Last modified by:   jahleel
+// @Last modified time: 2020-09-03T09:34:06-04:00
+// @License: GPLv3
+
+.btn {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background-color: #bab5a1;
+  color: inherit;
+  font-family: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  transition-property: color, background-color, box-shadow;
+
+  &:hover {
+    color: #dcd8c0;
+    background-color: #454138;
+    box-shadow: 0.2em 0.2em 0.1em 0 #bab5a1;
+  }
+
+  &:active {
+    background-color: #dcd8c0;
+    color: #454138;
+  }
+}
