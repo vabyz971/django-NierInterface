@@ -121,6 +121,42 @@ img {
   background-image: linear-gradient(90deg, $seconde, $seconde 10px, transparent 10px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px, transparent 12px, rgba($seconde, .4) 12px, rgba($seconde, .4) 13px, rgba($seconde, .8) 13px, rgba($seconde, .8) 14px, rgba($seconde, .9) 14px, rgba($seconde, .9) 15px, rgba($seconde, .4) 15px, rgba($seconde, .4) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px, transparent 12px, rgba($seconde, .9) 12px, rgba($seconde, .9) 13px, rgba($seconde, 1) 13px, rgba($seconde, 1) 14px, rgba($seconde, 1) 14px, rgba($seconde, 1) 15px, rgba($seconde, .9) 15px, rgba($seconde, .9) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px, transparent 12px, rgba($seconde, .9) 12px, rgba($seconde, .9) 13px, rgba($seconde, 1) 13px, rgba($seconde, 1) 14px, rgba($seconde, 1) 14px, rgba($seconde, 1) 15px, rgba($seconde, .9) 15px, rgba($seconde, .9) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px, transparent 12px, rgba($seconde, .4) 12px, rgba($seconde, .4) 13px, rgba($seconde, .8) 13px, rgba($seconde, .8) 14px, rgba($seconde, .9) 14px, rgba($seconde, .9) 15px, rgba($seconde, .4) 15px, rgba($seconde, .4) 16px, transparent 16px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px), linear-gradient(90deg, rgba($seconde, .9), rgba($seconde, .9) 1px, rgba($seconde, 1) 1px, rgba($seconde, 1) 2px, rgba($seconde, 1) 2px, rgba($seconde, 1) 3px, rgba($seconde, .9) 3px, rgba($seconde, .9) 4px, transparent 4px), linear-gradient(90deg, rgba($seconde, .4), rgba($seconde, .4) 1px, rgba($seconde, .8) 1px, rgba($seconde, .8) 2px, rgba($seconde, .9) 2px, rgba($seconde, .9) 3px, rgba($seconde, .4) 3px, rgba($seconde, .4) 4px, transparent 4px);
   background-repeat: repeat-x;
 }
+
+figure {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 0 1rem;
+  background-color: #dcd8c0;
+  padding: 0.5rem;
+}
+
+figure > :not(figcaption) {
+  margin: 0.5rem;
+}
+
+figure > figcaption {
+  -webkit-box-ordinal-group: -1;
+  -moz-box-ordinal-group: -1;
+  -o-box-ordinal-group: -1;
+  -ms-flex-order: -1;
+  -webkit-order: -1;
+  order: -1;
+  margin: -0.5rem -0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #454138;
+  color: #bab5a1;
+}
 /* CARD NIER */
 $bgcard: #dcd8c0;
 $bgcard-title: #bab5a1;
