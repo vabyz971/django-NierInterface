@@ -13,15 +13,6 @@ Ajouter les éléments suivent dans votre fichier settings.py
 DJANGO_APPS= ['nierInterface']
 ```
 
-```python
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'OPTIONS': {
-            'context_processors': [
-	       'nierInterface.context_processors.template_var',
-            ],
-        },
-    },
-]
-```
+## Capture
+
+![screen](captures/screenshot.png) 
