@@ -1,15 +1,17 @@
-{% load sass_tags %}
+{% load static sass_tags %}
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <title>{% block head_title %} NierInterface {% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta name="author" content="vabyz971" />
   <meta name="generator" content="NierAutomata Interface" />
+  <link rel="stylesheet" href='{% sass_src "scss/main.scss" %}'>
+
   {% block head-fix-css %}{% endblock %}
   {% block head %}{% endblock %}
-  <link rel="stylesheet" href='{% sass_src "scss/main.scss" %}'>
 
 </head>
 

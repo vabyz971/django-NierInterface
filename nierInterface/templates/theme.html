@@ -1,0 +1,13 @@
+{% extends "body.html" %}
+
+{% block head_title %}{{ title }}{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block nav %}{% include "include/navbar_menu.html" %}{% endblock %}
+
+
+{% block content %}
+  {% block content-title %}{% endblock %}
+  {% block content-inner %}{% endblock %}
+{% endblock content %}
