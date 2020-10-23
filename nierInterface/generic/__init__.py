@@ -2,7 +2,7 @@
 # @Date:   2020-09-03T10:25:28-04:00
 # @Email:  vabyz971@gmail.com
 # @Last modified by:   jahleel
-# @Last modified time: 2020-09-03T16:06:41-04:00
+# @Last modified time: 2020-10-22T22:32:15-04:00
 # @License: GPLv3
 #
 # Surcharge des classes based views
@@ -40,7 +40,7 @@ class FormMixin(DefaultFormMixin):
     """
     all_form_button = True
     submit_name = _('Save')
-    submit_btn_class = 'btn-primary'
+    submit_btn_class = 'btn'
     success_message = _('Your input has been saved.')
     error_message = _('Please correct the errors below.')
     cancel_url = None

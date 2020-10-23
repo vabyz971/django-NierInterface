@@ -1,0 +1,19 @@
+{% block modal-header %}
+<div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-label="titlemodal" style="display:none;">
+  {% block header %}
+  <figure class="js-modal-stop">
+    <figcaption id="titlemodal">{{ title }} <button class="js-modal-close">X</button></figcaption>
+  {% endblock header %}
+{% endblock modal-header %}
+
+    <div class="modal-wrapper">
+      {% block body %}
+      {% block content %}{% endblock %}
+      {% block footer %}{% endblock footer %}
+      {% endblock body %}
+    </div>
+  </figure>
+</div>
+
+{% block modal-js %}
+{% endblock modal-js %}

@@ -1,0 +1,80 @@
+// @Author: Jahleel Lacascade <jahleel>
+// @Date:   2020-10-22T19:37:57-04:00
+// @Email:  vabyz971@gmail.com
+// @Last modified by:   jahleel
+// @Last modified time: 2020-10-22T21:09:41-04:00
+// @License: GPLv3
+
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  animation: fadeIn 0.3s both;
+
+  figure {
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    animation: fromTop 0.3s both;
+  }
+
+  .modal-wrapper {
+    overflow: auto;
+    width: 600px;
+    padding: 10px;
+  }
+
+  button {
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: #dcd8c0;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.modal[aria-hidden="true"] {
+  animation-name: fadeOut;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fromTop {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
