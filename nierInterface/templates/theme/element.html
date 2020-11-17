@@ -1,0 +1,16 @@
+{% extends "body.html" %}
+
+{% block content-inner %}
+
+<div class="row">
+  <div class="container mb-5">
+    {% url 'nierInterface:modal' as url %}
+    <a class="btn nav-link" href="{{url}}" data-target="{{url}}#modal" data-toggle="modal">Modal Ajax</a>
+
+  </div>
+
+</div>
+
+
+
+{% endblock content-inner %}

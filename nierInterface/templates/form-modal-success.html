@@ -1,0 +1,36 @@
+{% extends "base-modal.html" %}
+
+{% block modal-header %}
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-label="titlemodal" style="display:none;">
+{% endblock modal-header %}
+
+{% block content %}
+
+<p>{{ content_text }}</p>
+
+{% endblock content %}
+
+{% block footer-js %}
+
+<script type="text/javascript">
+
+  {% if refresh_new_page %}
+
+    {% if success_url %}
+      window.open('{{ success_url }}', '_blank')
+    {% else %}
+      window.location.reload(true);
+    {% endif %}
+  {% else %}
+    {% if refresh_page and success_url %}
+      window.location = '{{ success_url }}'
+    {% else %}
+      location.reload()
+    {% endif %}
+  {% endif %}
+
+</script>
+
+{% endblock footer-js %}
+
+{% block modal-js %}{% endblock %}

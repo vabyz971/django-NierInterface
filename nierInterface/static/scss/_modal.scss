@@ -2,7 +2,7 @@
 // @Date:   2020-10-22T19:37:57-04:00
 // @Email:  vabyz971@gmail.com
 // @Last modified by:   jahleel
-// @Last modified time: 2020-10-22T21:09:41-04:00
+// @Last modified time: 2020-10-23T10:16:12-04:00
 // @License: GPLv3
 
 .modal {
@@ -14,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: #00000059;
   animation: fadeIn 0.3s both;
 
   figure {
@@ -23,14 +23,31 @@
     animation: fromTop 0.3s both;
   }
 
+  figcaption {
+    text-transform: uppercase;
+  }
+
   .modal-wrapper {
     overflow: auto;
     width: 600px;
-    padding: 10px;
+    padding: 5px;
   }
 
-  button {
+  .modal-footer {
+    padding-top: 15px;
+    justify-content: space-around;
+    border-top: solid 1px;
+    margin-top: 5px;
+
+    .btn {
+      width: 20%;
+    }
+  }
+
+  .cross {
     background: none;
+    position: fixed;
+    right: 25px;
     margin: 0;
     padding: 0;
     border: none;

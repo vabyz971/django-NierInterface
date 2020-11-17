@@ -2,17 +2,17 @@
 {% load crispy_forms_tags %}
 
 {% block body %}
-<form {% if form.helper.form_id %}id="{{ form.helper.form_id }}" {% endif %} action="{{ request.get_full_path }}" method="post" {% if form.is_multipart %}enctype="multipart/form-data" {% endif %}>
+<form {% if form.helper.form_id %} id="{{ form.helper.form_id }}" {% endif %} action="{{ request.get_full_path }}" method="post" {% if form.is_multipart %}enctype="multipart/form-data" {% endif %}>
 
 {% if form %}
 {% crispy form %}
 {% endif %}
 {% block footer %}
-<div class="">
+<div class="modal-footer row">
   <button type="submit" name="submit" class="btn {{ submit_btn_class }} ">{{submit_name}}</button>
   {% if close_button %}
-    <button type="button" class="btn js-modal-close" >{{ close_button }}</button>
-    {% endif %}
+    <button type="reset" class="btn js-modal-close" >{{ close_button }}</button>
+  {% endif %}
 </div>
 {% endblock footer %}
 </form>

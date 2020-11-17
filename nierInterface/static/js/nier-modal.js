@@ -3,7 +3,7 @@
  * @Date:   2020-10-22T18:40:28-04:00
  * @Email:  vabyz971@gmail.com
  * @Last modified by:   jahleel
- * @Last modified time: 2020-10-22T22:08:52-04:00
+ * @Last modified time: 2020-10-23T10:10:55-04:00
  * @License: GPLv3
  */
 
@@ -38,6 +38,7 @@ const closeModal = function(e) {
   modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation)
   window.setTimeout(function() {
     modal.style.display = "none"
+    modal.remove()
     modal = null
   }, 400)
 }

@@ -7,7 +7,15 @@
 {% endblock modal-header %}
     <div class="modal-wrapper">
       {% block body %}
-      {% block content %}{% endblock %}
+      {% block content %}
+      <form class="" action="index.html" method="post">
+        <label for="">Name:</label>
+        <input type="text" name="name" value="">
+        <label for="">Email:</label>
+        <input type="text" name="name" value="">
+        <button type="submit" name="button">submit</button>
+      </form>
+      {% endblock %}
       {% block footer %}{% endblock footer %}
       {% endblock body %}
     </div>
